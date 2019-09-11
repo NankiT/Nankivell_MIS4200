@@ -15,7 +15,7 @@ namespace Nankivell_MIS4200.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Development Journal";
 
             return View();
         }
