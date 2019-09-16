@@ -5,14 +5,14 @@ using System.Web;
 
 namespace Nankivell_MIS4200.Models
 {
-    public class customer
+    public class Customers
     {
         public int customerID { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string phone { get; set; }
         public string email { get; set; }
-        public ICollection<order> orders { get; set; }
+        public ICollection<Orders> Orders { get; set; }
 
     }
 }
