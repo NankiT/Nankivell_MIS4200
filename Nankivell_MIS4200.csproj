@@ -168,12 +168,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdventureController.cs" />
+    <Compile Include="Controllers\CharacterController.cs" />
+    <Compile Include="Controllers\EpisodeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DAL\MIS4200Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Adventure.cs" />
+    <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\Episode.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -235,10 +242,29 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Characters\Create.cshtml" />
+    <Content Include="Views\Characters\Delete.cshtml" />
+    <Content Include="Views\Characters\Details.cshtml" />
+    <Content Include="Views\Characters\Edit.cshtml" />
+    <Content Include="Views\Characters\Index.cshtml" />
+    <Content Include="Views\Character\Create.cshtml" />
+    <Content Include="Views\Character\Delete.cshtml" />
+    <Content Include="Views\Character\Details.cshtml" />
+    <Content Include="Views\Character\Edit.cshtml" />
+    <Content Include="Views\Character\Index.cshtml" />
+    <Content Include="Views\Adventure\Create.cshtml" />
+    <Content Include="Views\Adventure\Delete.cshtml" />
+    <Content Include="Views\Adventure\Details.cshtml" />
+    <Content Include="Views\Adventure\Edit.cshtml" />
+    <Content Include="Views\Adventure\Index.cshtml" />
+    <Content Include="Views\Episode\Create.cshtml" />
+    <Content Include="Views\Episode\Delete.cshtml" />
+    <Content Include="Views\Episode\Details.cshtml" />
+    <Content Include="Views\Episode\Edit.cshtml" />
+    <Content Include="Views\Episode\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

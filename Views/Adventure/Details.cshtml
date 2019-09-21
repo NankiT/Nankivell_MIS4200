@@ -1,0 +1,50 @@
+﻿@model Nankivell_MIS4200.Models.Adventure
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Adventure</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Character.characterName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Character.characterName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Episode.episodeTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Episode.episodeTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aPlot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aPlot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bPlot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bPlot)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.adventureId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
