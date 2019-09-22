@@ -18,10 +18,10 @@ namespace Nankivell_MIS4200.DAL
         public DbSet<Character> Character { get; set; }
         public DbSet<Adventure> Adventure { get; set; }
         public DbSet<Episode> Episode { get; set; }
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+       protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
         }
 
-    }
+    } 
 }
