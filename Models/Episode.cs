@@ -9,6 +9,7 @@ namespace Nankivell_MIS4200.Models
     {
         public int episodeId { get; set; }
         public string episodeTitle { get; set; }
+        public int episodeNumber { get; set; }
         public int Season { get; set; }
         public ICollection<Adventure> Adventure { get; set; }
 
