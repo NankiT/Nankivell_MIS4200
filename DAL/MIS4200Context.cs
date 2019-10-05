@@ -23,5 +23,6 @@ namespace Nankivell_MIS4200.DAL
             base.OnModelCreating(modelBuilder);
         }
 
+        public System.Data.Entity.DbSet<Nankivell_MIS4200.Models.UserDetails> UserDetails { get; set; }
     }
 }

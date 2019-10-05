@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Adventure List</h2>
+<h2>Adventures</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -20,9 +20,6 @@
         <th>
             @Html.DisplayNameFor(model => model.aPlot)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.bPlot)
-        </th>
         <th></th>
     </tr>
 
@@ -36,9 +33,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.aPlot)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.bPlot)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.adventureId }) |

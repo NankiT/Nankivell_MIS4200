@@ -50,7 +50,7 @@ namespace Nankivell_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "adventureId,aPlot,bPlot,characterId,episodeId")] Adventure adventure)
+        public ActionResult Create([Bind(Include = "adventureId,aPlot,characterId,episodeId")] Adventure adventure)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Nankivell_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "adventureId,aPlot,bPlot,characterId,episodeId")] Adventure adventure)
+        public ActionResult Edit([Bind(Include = "adventureId,aPlot,characterId,episodeId")] Adventure adventure)
         {
             if (ModelState.IsValid)
             {
