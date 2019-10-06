@@ -57,8 +57,15 @@ namespace Nankivell_MIS4200.Controllers
                 Guid.TryParse(User.Identity.GetUserId(), out memberID);
                 userDetails.ID = memberID;
                 db.UserDetails.Add(userDetails);
-                db.SaveChanges();
-
+                try
+                {
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+                    return View("DuplicateUser");
+                }
                 return RedirectToAction("Index");
             }
 
