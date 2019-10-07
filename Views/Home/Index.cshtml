@@ -4,44 +4,52 @@
 
 <div class="jumbotron">
     <h2>MIS4200</h2>
-    <p class="lead">
+    <div class="well">
     This website was created by me, Nick Nankivell, for my MIS 4200 class. I can't to learn more about programing and websites.
     This website is designed to keep a record of Rick and Morty Characters, Episodes, and the Adventures that link the two together.
-    </p>
+    </div>
     <p></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
         <h2>
-            Rick and Morty
+            Rick and Morty <span class="glyphicon glyphicon-fire"></span>
         </h2>
         <p>
             Click the button to visit the Rick and Morty website.
 
         </p>
-        <p><a class="btn btn-default" href="https://www.rickandmorty.com">Rick & Morty &raquo;</a></p>
+        <p><a class="btn btn-primary" href="https://www.rickandmorty.com">Rick & Morty &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>
-            Episodes
+            Episodes <span class="glyphicon glyphicon-expand"></span>
         </h2>
         <p>
-            Here is a list of all rick and morty episodes rleased to date
+            Here is a list of all rick and morty episodes released to date
         </p>
-        <p><a class="btn btn-default" href="https://www.youngthegiant.com">Episode list &raquo;</a></p>
+        <p><a class="btn btn-primary" href="https://www.google.com/search?q=rick+and+morty+episode+list&rlz=1C1CHBF_enUS705US705&oq=rick+and+morty+ep&aqs=chrome.1.69i57j0j69i59j0l3.6557j0j7&sourceid=chrome&ie=UTF-8">Episode list &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>
-          Internal Links
+         Inernal Database <span class="glyphicon glyphicon-folder-close"></span>
         </h2>
         <p>
 
-            Here are links to other sections of my website.
+            View, add, and edit characters, episodes, and adventures from Rick and Morty
             <br />
-            @Html.ActionLink("Character", "Index", "Character")<br />
-            @Html.ActionLink("Adventure", "Index", "Adventure")<br />
-            @Html.ActionLink("Episode", "Index", "Episode")<br />
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Rick & Morty
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Character", "Index", "Character")</li>
+                    <li>@Html.ActionLink("Adventure", "Index", "Adventure")</li>
+                    <li>@Html.ActionLink("Episode", "Index", "Episode")</li>
+                </ul>
+            </div>
 
         </p>
         

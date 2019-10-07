@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "NotAuthenticated";
+    <br />
+    <br />
+    <div class="alert alert-danger">
+        <h2>Not Allowed</h2>
+     You are not authorized to access this page please sign in again
+    </div>
+    <br />
+    @Html.ActionLink("Return to login", "Login", "Account")

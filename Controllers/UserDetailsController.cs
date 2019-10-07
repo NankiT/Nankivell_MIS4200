@@ -19,7 +19,14 @@ namespace Nankivell_MIS4200.Controllers
         // GET: UserDetails
         public ActionResult Index()
         {
-            return View(db.UserDetails.ToList());
+            if (User.Identity.IsAuthenticated)
+            {
+                return View(db.UserDetails.ToList());
+            }
+            else
+            {
+                return View("NotAuthenticated");
+            }
         }
 
         // GET: UserDetails/Details/5
@@ -48,13 +55,14 @@ namespace Nankivell_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Email,firstName,lastName,PhoneNumber")] UserDetails userDetails)
+        public ActionResult Create([Bind(Include = "ID,firstName,lastName,PhoneNumber")] UserDetails userDetails)
         {
           
             if (ModelState.IsValid)
             {
                 Guid memberID;
                 Guid.TryParse(User.Identity.GetUserId(), out memberID);
+                userDetails.Email = User.Identity.Name;
                 userDetails.ID = memberID;
                 db.UserDetails.Add(userDetails);
                 try
@@ -66,7 +74,7 @@ namespace Nankivell_MIS4200.Controllers
                 {
                     return View("DuplicateUser");
                 }
-                return RedirectToAction("Index");
+               
             }
 
             return View(userDetails);
@@ -79,12 +87,21 @@ namespace Nankivell_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserDetails userDetails = db.UserDetails.Find(id);
-            if (userDetails == null)
+            UserDetails user = db.UserDetails.Find(id);
+            if (user == null)
             {
                 return HttpNotFound();
             }
-            return View(userDetails);
+            Guid memberID;
+            Guid.TryParse(User.Identity.GetUserId(), out memberID);
+            if (user.ID == memberID)
+            {
+                return View(user);
+            }
+            else
+            {
+                return View("NotAuthenticated");
+            }
         }
 
         // POST: UserDetails/Edit/5

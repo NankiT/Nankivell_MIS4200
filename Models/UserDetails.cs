@@ -11,7 +11,7 @@ namespace Nankivell_MIS4200.Models
         
             [Required]
             public Guid ID { get; set; }
-            [Required]
+            
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
